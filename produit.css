@@ -262,76 +262,80 @@ footer {
     background-color: #dc3545; /* Couleur pour 'En Rupture' */
 }
 
-/* Styles pour la barre de recherche */
-.search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-}
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    /* Adapter le header */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-#search-bar {
-    padding: 10px;
-    font-size: 1rem;
-    width: 300px;
-    border: 2px solid #ddd;
-    border-radius: 5px 0 0 5px;
-}
+    .menu-toggle {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 10px;
+    }
 
-#search-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #fa920a;
-    color: white;
-    border: 2px solid #fa920a;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 10px; /* Espace entre le champ de recherche et le bouton */
-}
+    /* Barre latérale */
+    .sidebar {
+        width: 100%; /* Barre latérale prend toute la largeur sur mobile */
+        left: -100%; /* Masquer hors de l'écran par défaut */
+    }
 
-#search-button:hover {
-    background-color: #e07b00;
-}
+    .sidebar.open {
+        left: 0;
+    }
 
-#clear-button {
-    position: absolute;
-    right: 80px; /* Ajustez cette valeur pour éviter la superposition avec le bouton de recherche */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
+    /* Contenu principal */
+    .tabcontent {
+        margin-left: 0;
+        padding: 10px;
+    }
 
-/* Style de base pour les produits */
-.product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    position: relative;
-}
+    .filter-section {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-/* Style pour le statut */
-.status {
-    display: inline-block;
-    padding: 5px;
-    border-radius: 3px;
-    font-weight: bold;
-    margin-top: 10px;
-}
+    /* Barre de recherche */
+    #search-bar {
+        width: 100%; /* Prendre toute la largeur disponible */
+        margin-bottom: 10px;
+    }
 
-/* Couleur pour les produits en stock */
-.en-stock {
-    color: #fff;
-    background-color: #28a745; /* Vert pour en stock */
-}
+    #search-button {
+        width: 100%;
+        margin-left: 0;
+    }
 
-/* Couleur pour les produits en rupture */
-.en-rupture {
-    color: #fff;
-    background-color: #dc3545; /* Rouge pour rupture de stock */
+    /* Catalogue de produits */
+    .product-catalog {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    /* Boutons de défilement */
+    .scroll-button.left,
+    .scroll-button.right {
+        display: none; /* Masquer les boutons de défilement sur mobile */
+    }
+
+    /* Produits */
+    .product-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+    }
 }

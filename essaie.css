@@ -1,4 +1,4 @@
-/* Styles globaux */ 
+/* Styles globaux */
 body { 
     margin: 0; 
     font-family: Arial, sans-serif; 
@@ -7,7 +7,9 @@ body {
     background-color: #f5f5f5; 
     box-sizing: border-box; 
     text-align: center; 
-} header {
+}
+
+header {
     background-color: #fa920a; 
     color: white; 
     padding: 20px 0; 
@@ -27,9 +29,9 @@ h2, h3 {
 
 p { 
     padding: 0 0 0 50px; 
-} 
+}
 
-/* Styles pour le bouton de menu */ 
+/* Styles pour le bouton de menu */
 .menu-toggle { 
     background: #000000; 
     border: none; 
@@ -37,33 +39,33 @@ p {
     font-size: 1.5rem; 
     padding: 0.5rem; 
     cursor: pointer; 
-    display: block; /* Afficher le bouton */ 
-    width: 50px; /* Largeur fixe */ 
-    text-align: center; /* Centrer le texte */ 
+    display: block; 
+    width: 50px; 
+    text-align: center; 
     position: absolute; 
-    left: 1rem; /* Positionne le bouton à gauche */ 
+    left: 1rem; 
     top: 50%; 
-    transform: translateY(-50%); /* Centrer verticalement */ 
+    transform: translateY(-50%); 
 } 
 
-/* Styles pour la barre de navigation */ 
+/* Styles pour la barre de navigation */
 .sidebar { 
     position: fixed; 
-    left: -250px; /* Masquer le menu à gauche par défaut */ 
+    left: -250px; 
     top: 0; 
-    width: 200px; /* Largeur du menu */ 
+    width: 200px; 
     height: 100vh; 
     background: #fa920a; 
     color: #fff; 
     padding: 1rem; 
-    transition: left 0.3s; /* Transition pour l'animation */ 
-    overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur */ 
+    transition: left 0.3s; 
+    overflow-y: auto; 
     border: 1px solid black; 
     z-index: 1000;
 } 
 
 .sidebar.open { 
-    left: 0; /* Afficher le menu lorsqu'il a la classe open */ 
+    left: 0; 
 } 
 
 .sidebar nav ul { 
@@ -89,23 +91,48 @@ p {
     border-radius: 5px; 
 } 
 
-/* Styles pour le contenu principal */ 
+/* Styles pour le contenu principal */
 main { 
     padding: 1rem; 
-    transition: margin-left 0.3s; /* Transition pour l'animation */ 
+    transition: margin-left 0.3s; 
 } 
 
-/* Afficher le bouton menu sur les petits écrans */ 
+/* Responsive pour les petits écrans */
 @media (max-width: 768px) { 
     .menu-toggle { 
-        display: block; /* Afficher le bouton menu sur les petits écrans */ 
+        display: block; 
     } 
-    main { 
-        margin-left: 0; /* Pas de marge à gauche pour le contenu principal */ 
-    } 
-} 
 
-/* Délimitation des sections */ 
+    main { 
+        margin-left: 0; 
+    } 
+
+    /* Section */
+    section { 
+        width: 90%; 
+    } 
+
+    /* Slideshow */
+    .slideshow { 
+        width: 100%; 
+        height: auto; 
+    }
+
+    .slide-track { 
+        width: calc(100% * 3); 
+    }
+
+    .slide { 
+        min-width: 100%; 
+    }
+
+    /* Horaires d'ouverture */
+    table { 
+        width: 90%; 
+    }
+}
+
+/* Délimitation des sections */
 section { 
     background-color: white; 
     margin: 20px auto; 
@@ -113,63 +140,63 @@ section {
     width: 80%; 
     border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-} 
+}
 
-/* Slideshow */ 
+/* Slideshow */
 .slideshow { 
     width: 80%; 
     overflow: hidden; 
     position: relative; 
     height: 300px; 
     margin: 30px auto; 
-} 
+}
 
 .slide-track { 
     display: flex; 
-    width: calc(300px * 3); /* Width of image times the number of images */ 
+    width: calc(300px * 3); 
     animation: scroll 15s linear infinite; 
-} 
+}
 
 @keyframes scroll { 
     0% { transform: translateX(0); } 
     100% { transform: translateX(calc(-300px * 3)); 
     } 
-} 
+}
 
 .slide { 
     min-width: 300px; 
     transition: transform 1s ease-in-out; 
-} 
+}
 
 .slideshow img { 
     width: 100%; 
     height: auto; 
     border-radius: 8px; 
-} 
+}
 
-/* Lien vers nos produits */ 
+/* Lien vers nos produits */
 .product-link { 
     margin: 30px auto; 
     text-align: center; 
-} 
+}
 
 .product-link h2 { 
     margin-bottom: 10px; 
     font-size: 1.8em; 
     color: #333; 
-} 
+}
 
 .product-link p { 
     font-size: 1.2em; 
     color: #666; 
     margin-bottom: 15px; 
-} 
+}
 
 .product-link a { 
     display: inline-block; 
     text-decoration: none; 
     color: inherit; 
-} 
+}
 
 .product-link img { 
     width: 300px; 
@@ -179,83 +206,60 @@ section {
     border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     margin: 0 auto; 
-} 
+}
 
 .product-link img:hover { 
     transform: scale(1.1); 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
-} 
-
-.product-link .badge-bio {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: green;
-    color: white;
-    padding: 5px;
-    font-size: 12px;
-    border-radius: 5px;
 }
 
-.bio-certification {
-    text-align: center;
-    padding: 40px;
-    background-color: #f5f5f5;
-}
-
-.bio-certification img.label-bio {
-    width: 60px;
-    height: auto;
-    margin-top: 20px;
-}
-
-/* Horaires d'ouverture */ 
+/* Horaires d'ouverture */
 .hours { 
     margin: 30px auto; 
     text-align: center; 
-} 
+}
 
 #status { 
     font-size: 1.5em; 
     font-weight: bold; 
     margin-bottom: 20px; 
-} 
+}
 
 .open { 
     color: #28a745; 
-} 
+}
 
 .closed { 
     color: #dc3545; 
-} 
+}
 
 table { 
     width: 60%; 
     margin: 0 auto; 
     border-collapse: collapse; 
-} 
+}
 
 th, td { 
     padding: 15px; 
     border: 1px solid #ddd; 
     font-size: 1.1em; 
-} 
+}
 
 th { 
     background-color: #f2f2f2; 
     font-weight: bold; 
-} 
+}
 
 .intro, .map { 
     margin: 20px 0; 
-} 
+}
 
 .map iframe { 
     width: 100%; 
     height: 450px; 
-} 
+}
 
-/* Styles pour le pied de page */ 
+/* Styles pour le pied de page */
 footer { 
     text-align: center; 
     padding: 10px; 
@@ -263,6 +267,6 @@ footer {
     color: #fff; 
 }
 
-p{
-    color: black;
+p { 
+    color: black; 
 }
