@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un produit</title>
+    <link rel="stylesheet" href="entre.css">
+</head>
+<body>
+    <h1>Ajouter un nouveau produit</h1>
+    <form id="ajout-produit-form">
+        <label for="nom">Nom du produit:</label>
+        <input type="text" id="nom" required>
+        <label for="prix">Prix:</label>
+        <input type="text" id="prix" required>
+        <label for="image">URL de l'image:</label>
+        <input type="text" id="image" required>
+        <label for="categorie">Catégorie:</label>
+        <select id="categorie" required>
+            <option value="">Sélectionnez une catégorie</option>
+            <option value="legumes">Légumes</option>
+            <option value="fruits">Fruits</option>
+            <option value="fleurs">Fleurs</option>
+        </select>
+        <button type="submit">Ajouter le produit</button>
+    </form>
+    <script src="ajout-produit.js"></script>
+</body>
+</html>

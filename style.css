@@ -1,0 +1,114 @@
+/* Styles globaux */ 
+body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #f4f4f4; 
+} 
+
+header { 
+    background: #fa920a; 
+    color: #fff; 
+    padding: 1rem; 
+    display: flex; 
+    align-items: center; 
+    border: 1px solid rgb(255, 72, 0)
+} 
+
+/* Styles pour le bouton de menu */ 
+.menu-toggle { 
+    background: #000000; 
+    border: none; 
+    color: #ffffff; 
+    font-size: 1.5rem; 
+    padding: 0.5rem; 
+    cursor: pointer; 
+    display: block; /* Afficher le bouton */ 
+    width: 50px; /* Largeur fixe */ 
+    text-align: center; /* Centrer le texte */ 
+    position: absolute; 
+    left: 1rem; /* Positionne le bouton à gauche */ 
+    top: 50%; 
+    transform: translateY(-650%); /* Centrer verticalement */ 
+} 
+
+/* Styles pour la barre de navigation */ 
+.sidebar { 
+    position: fixed; 
+    left: -250px; /* Masquer le menu à gauche par défaut */ 
+    top: 0; 
+    width: 200px; /* Largeur du menu */ 
+    height: 100vh; 
+    background: #fa920a; 
+    color: #fff; 
+    padding: 1rem; 
+    transition: left 0.3s; /* Transition pour l'animation */ 
+    overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur */ 
+    border: 1px solid black;
+} 
+
+.sidebar.open { 
+    left: 0; /* Afficher le menu lorsqu'il a la classe open */ 
+} 
+
+.sidebar nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+} 
+
+.sidebar nav ul li { 
+    margin: 1rem 0; 
+} 
+
+.sidebar nav ul li a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    display: block; 
+    padding: 0.5rem 1rem; 
+} 
+
+.sidebar nav ul li a:hover { 
+    background: #555; 
+    border-radius: 5px; 
+} 
+
+/* Styles pour le contenu principal */ 
+main { 
+    padding: 1rem; 
+    transition: margin-left 0.3s; /* Transition pour l'animation */ 
+} 
+
+/* Afficher le bouton menu sur les petits écrans */ 
+@media (max-width: 768px) { 
+    .menu-toggle { 
+        display: block; /* Afficher le bouton menu sur les petits écrans */ 
+    } 
+    main { 
+        margin-left: 0; /* Pas de marge à gauche pour le contenu principal */ 
+    } 
+}
+
+
+h2,
+p,
+h3{
+    color: black;
+    padding: 0 0 0 50px;
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    color: black
+}
+
+/* Styles pour le pied de page */ 
+footer { 
+    text-align: center; 
+    padding: 10px; 
+    background: #fa920a; 
+    color: #fff; 
+} 

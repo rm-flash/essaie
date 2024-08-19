@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gestion des Produits</title>
+    <link rel="stylesheet" href="entre.css"> <!-- Renommez selon vos fichiers CSS -->
+</head>
+<body>
+    <!-- Section de connexion -->
+    <div id="login-section">
+        <h1>Connexion à l'administration</h1>
+        <input type="password" id="adminCode" placeholder="Entrez le mot de passe">
+        <button id="verifyCode">Valider</button>
+        <p id="error-message" style="color: red; display: none;">Mot de passe incorrect</p>
+    </div>
+
+    <!-- Contenu d'administration -->
+    <div id="admin-content" style="display: none;">
+        <h1>Administration des Produits</h1> 
+        <button id="logout">Déconnexion</button>
+        <button onclick="window.location.href='admin-produits.html'">Page des produits en ligne</button>
+        <button onclick="window.location.href='ajouter-produit.html'">Ajouter un nouveau produit</button>
+
+        <div id="produits-list"></div> 
+    </div>
+
+    <script src="entre.js"></script> <!-- Assurez-vous que le fichier JS est nommé correctement -->
+</body>
+</html>

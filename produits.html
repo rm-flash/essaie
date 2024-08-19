@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue de Produits</title>
+    <link rel="stylesheet" href="produit.css">
+</head>
+<body>
+    <header>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+        <h1>Nos Produits</h1>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Rechercher un produit...">
+            <button id="clear-button" aria-label="Effacer"></button>
+            <button id="search-button">Rechercher</button>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="entree.html">Administration</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main id="catalog" class="tabcontent">
+        <div class="filter-section">
+            <select id="category-filter">
+                <option value="">Toutes les catégories</option>
+                <option value="fruits">Fruits</option>
+                <option value="legumes">Légumes</option>
+                <option value="fleurs">Fleurs</option>
+                <!-- Ajoute d'autres catégories ici si nécessaire -->
+            </select>
+        </div>
+        <div class="product-catalog">
+            <button class="scroll-button left">&#9664;</button>
+            <div id="produits-container" class="product-wrapper">
+                <!-- Les produits seront ajoutés dynamiquement ici -->
+            </div>
+            <button class="scroll-button right">&#9654;</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 [Nom du Maraîcher] - Tous droits réservés.</p>
+    </footer>
+    <script src="produit.js"></script>
+</body>
+</html>
